@@ -105,6 +105,9 @@
 		9ABAE0361CCF8FF7009477CF /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		9AFE68031CCF982800B7C6AC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		9AFE68051CCF986C00B7C6AC /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/Mac/CryptoSwift.framework; sourceTree = "<group>"; };
+		BD64695B1D9514DB00C8E24C /* Cache-tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Cache-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD64695D1D9514DB00C8E24C /* Cache-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cache-tvOS.h"; sourceTree = "<group>"; };
+		BD64695F1D9514DB00C8E24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5291C0D1C28220B00B702C9 /* UIImage+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
 		D5291C151C28220B00B702C9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D5291C171C28220B00B702C9 /* Cachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
@@ -160,12 +163,18 @@
 		D5ACACD21CD0254300567809 /* SyncHybridCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHybridCacheSpec.swift; sourceTree = "<group>"; };
 		D5ACACDD1CD0272600567809 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		D5DC59E01C20593E003BD79B /* Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5DC5A181C205AC9003BD79B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5DC5A6C1C205C2A003BD79B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D5DC5A6D1C205C2A003BD79B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD6469571D9514DB00C8E24C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5291D151C2837DB00B702C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +216,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD6469551D9514CA00C8E24C /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		BD64695C1D9514DB00C8E24C /* Cache-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				BD64695D1D9514DB00C8E24C /* Cache-tvOS.h */,
+				BD64695F1D9514DB00C8E24C /* Info.plist */,
+			);
+			path = "Cache-tvOS";
+			sourceTree = "<group>";
+		};
 		D5291C081C28220B00B702C9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +448,7 @@
 		D5291DA41C28452300B702C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD6469551D9514CA00C8E24C /* tvOS */,
 				D5291DA61C28454800B702C9 /* iOS */,
 				D5291DA51C28454000B702C9 /* Mac */,
 			);
@@ -462,9 +488,9 @@
 			isa = PBXGroup;
 			children = (
 				D5643E341C43F2CC00582E17 /* Playgrounds */,
+				BD64695C1D9514DB00C8E24C /* Cache-tvOS */,
 				D5291DA41C28452300B702C9 /* Frameworks */,
 				D5291C081C28220B00B702C9 /* Source */,
-				D5DC5A161C205AC9003BD79B /* SupportFiles */,
 				D5DC59FA1C205AC9003BD79B /* Tests */,
 				D5DC59E11C20593E003BD79B /* Products */,
 			);
@@ -477,6 +503,7 @@
 				D5291D181C2837DB00B702C9 /* Cache-iOS-Tests.xctest */,
 				D5291D601C283B5300B702C9 /* Cache.framework */,
 				D5291D691C283B5400B702C9 /* Cache-Mac-Tests.xctest */,
+				BD64695B1D9514DB00C8E24C /* Cache-tvOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -490,17 +517,16 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		D5DC5A161C205AC9003BD79B /* SupportFiles */ = {
-			isa = PBXGroup;
-			children = (
-				D5DC5A181C205AC9003BD79B /* Info.plist */,
-			);
-			path = SupportFiles;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		BD6469581D9514DB00C8E24C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5291D5D1C283B5300B702C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +544,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BD64695A1D9514DB00C8E24C /* Cache-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6469601D9514DB00C8E24C /* Build configuration list for PBXNativeTarget "Cache-tvOS" */;
+			buildPhases = (
+				BD6469561D9514DB00C8E24C /* Sources */,
+				BD6469571D9514DB00C8E24C /* Frameworks */,
+				BD6469581D9514DB00C8E24C /* Headers */,
+				BD6469591D9514DB00C8E24C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cache-tvOS";
+			productName = "Cache-tvOS";
+			productReference = BD64695B1D9514DB00C8E24C /* Cache-tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D5291D171C2837DB00B702C9 /* Cache-iOS-Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5291D201C2837DB00B702C9 /* Build configuration list for PBXNativeTarget "Cache-iOS-Tests" */;
@@ -605,6 +649,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Hyper Interaktiv AS";
 				TargetAttributes = {
+					BD64695A1D9514DB00C8E24C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					D5291D171C2837DB00B702C9 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -635,11 +682,19 @@
 				D5291D171C2837DB00B702C9 /* Cache-iOS-Tests */,
 				D5291D5F1C283B5300B702C9 /* Cache-Mac */,
 				D5291D681C283B5400B702C9 /* Cache-Mac-Tests */,
+				BD64695A1D9514DB00C8E24C /* Cache-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BD6469591D9514DB00C8E24C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5291D161C2837DB00B702C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,6 +801,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BD6469561D9514DB00C8E24C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5291D141C2837DB00B702C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -855,6 +917,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BD6469611D9514DB00C8E24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Cache-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zenangst.Cache-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		BD6469621D9514DB00C8E24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Cache-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zenangst.Cache-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
 		D5291D211C2837DB00B702C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1105,6 +1211,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BD6469601D9514DB00C8E24C /* Build configuration list for PBXNativeTarget "Cache-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6469611D9514DB00C8E24C /* Debug */,
+				BD6469621D9514DB00C8E24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5291D201C2837DB00B702C9 /* Build configuration list for PBXNativeTarget "Cache-iOS-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
